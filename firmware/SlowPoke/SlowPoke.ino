@@ -31,7 +31,7 @@ byte forwardSequenceLarge[] = {12,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13};
 byte forwardSequenceLarge2[] = {16,15,14,13,12,27,26,25,24,23,22,21,20,19,18,17};
 byte reverseSequence[] = {13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,12,11,10,9,8,7,6,5,4,3,2,1,0};
 byte greens[] = {2, 4, 16, 32, 64, 128, 180, 128, 64, 32, 16, 4, 2};
-int delays[] = {500, 300, 200, 100, 50, 50, 50, 25, 25, 25, 25, 25, 25};
+int delays[] = {25, 25, 25, 25, 25, 25, 50, 50, 50, 100, 200, 300, 500};
 
 void setup() {
   // This is for Trinket 5V 16MHz, you can remove these three lines if you are not using a Trinket
@@ -161,7 +161,7 @@ void pulse(byte sequence[], byte delta, int delayval, boolean updown, boolean pu
 
 void slowRotate(byte sequence[]) {
   byte winoffset = 0;
-  for (byte j=0;j<2;j++) {  // repetions of the sequence
+  for (byte j=0;j<1;j++) {  // repetions of the sequence
     for (byte i=0;i<8;i++) { // Turtle goes around
       winoffset = 0;
       for (byte k=0;k<sizeof(greens);k++) { // Turtle goes around
